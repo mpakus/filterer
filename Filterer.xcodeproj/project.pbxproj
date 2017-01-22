@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E82230C01E34AE2600CDCF02 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82230BF1E34AE2600CDCF02 /* TableViewController.swift */; };
 		E82459271E1BECD500831344 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82459261E1BECD500831344 /* AppDelegate.swift */; };
 		E82459291E1BECD500831344 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82459281E1BECD500831344 /* ViewController.swift */; };
 		E824592C1E1BECD500831344 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E824592A1E1BECD500831344 /* Main.storyboard */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E82230BF1E34AE2600CDCF02 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		E82459231E1BECD500831344 /* Filterer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Filterer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E82459261E1BECD500831344 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E82459281E1BECD500831344 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 				E82459381E1BEE0300831344 /* RGBAImage.swift */,
 				E82459261E1BECD500831344 /* AppDelegate.swift */,
 				E82459281E1BECD500831344 /* ViewController.swift */,
+				E82230BF1E34AE2600CDCF02 /* TableViewController.swift */,
 				E824592A1E1BECD500831344 /* Main.storyboard */,
 				E824592D1E1BECD500831344 /* Assets.xcassets */,
 				E824592F1E1BECD500831344 /* LaunchScreen.storyboard */,
@@ -142,6 +145,7 @@
 				E82459291E1BECD500831344 /* ViewController.swift in Sources */,
 				E82459391E1BEE0300831344 /* RGBAImage.swift in Sources */,
 				E82459271E1BECD500831344 /* AppDelegate.swift in Sources */,
+				E82230C01E34AE2600CDCF02 /* TableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

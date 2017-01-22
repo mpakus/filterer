@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
   @IBOutlet weak var imageView: UIImageView!
   @IBOutlet weak var toggleImage: UIButton!
@@ -43,6 +43,77 @@ class ViewController: UIViewController {
       sender.isSelected = true
     }
   }
+
+  @IBAction func onNewPhoto(_ sender: Any) {
+    let actionSheet = UIAlertController(
+      title: "New Photo",
+      message: nil,
+      preferredStyle: .actionSheet
+    )
+
+    actionSheet.addAction(
+      UIAlertAction(
+        title: "Camera",
+        style: .default,
+        handler: { action in self.showCamera() }
+      )
+    )
+    
+    actionSheet.addAction(
+      UIAlertAction(
+        title: "Album",
+        style: .default,
+        handler: { action in self.showAlbum() }
+      )
+    )
+    
+    actionSheet.addAction(
+      UIAlertAction(
+        title: "Cancel",
+        style: .cancel,
+        handler: nil
+      )
+    )
+    
+    self.present(actionSheet, animated: true, completion: nil)
+  }
+  
+  @IBAction func onShare(_ sender: Any) {
+    let activityController = UIActivityViewController(
+      activityItems: [imageView.image!],
+      applicationActivities: nil
+    )
+    
+    present(activityController, animated: true, completion: nil)
+  }
+  
+  func showCamera(){
+    let cameraPicker = UIImagePickerController()
+    cameraPicker.delegate = self
+    cameraPicker.sourceType = .camera
+  
+    present(cameraPicker, animated: true, completion: nil)
+  }
+  
+  func showAlbum(){
+    let cameraPicker = UIImagePickerController()
+    cameraPicker.delegate = self
+    cameraPicker.sourceType = .photoLibrary
+    
+    present(cameraPicker, animated: true, completion: nil)
+  }
+  
+  func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+    if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
+      imageView.image = image
+    }
+  }
+  
+  func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+    dismiss(animated: true, completion: nil)
+  }
+  
+  // Private methods
   
   func showSecodaryMenu(){
     view.addSubview(secondaryMenu)
@@ -72,5 +143,6 @@ class ViewController: UIViewController {
       }
     )
   }
+  
 }
 
