@@ -135,12 +135,12 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
       imageView.image = image
     }
+    dismiss(animated: true, completion: nil)
   }
   
   func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
     dismiss(animated: true, completion: nil)
   }
-  
 
   func showSecodaryMenu(){
     view.addSubview(secondaryMenu)
