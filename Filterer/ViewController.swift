@@ -104,8 +104,27 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     applyFilter(InvertFilter())
   }
   
-  @IBAction func onFilterOpacity(_ sender: Any) {
-    applyFilter(OpacityFilter(["level": "510"]))
+  @IBAction func onFilterRotate(_ sender: Any) {
+    imageView.image = rotateImage(imageView.image!)
+  }
+  
+  func rotateImage(_ image: UIImage) -> UIImage{
+    var rotatedImage = UIImage();
+    switch image.imageOrientation
+    {
+    case UIImageOrientation.right:
+      rotatedImage = UIImage(cgImage: image.cgImage!, scale: 1, orientation:UIImageOrientation.down)
+      
+    case UIImageOrientation.down:
+      rotatedImage = UIImage(cgImage: image.cgImage!, scale: 1, orientation:UIImageOrientation.left)
+      
+    case UIImageOrientation.left:
+      rotatedImage = UIImage(cgImage:image.cgImage!, scale: 1, orientation:UIImageOrientation.up)
+      
+    default:
+      rotatedImage = UIImage(cgImage: image.cgImage!, scale: 1, orientation:UIImageOrientation.right)
+    }
+    return rotatedImage;
   }
   
   // Private methods

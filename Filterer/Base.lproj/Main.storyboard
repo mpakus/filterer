@@ -106,38 +106,38 @@
                             <rect key="frame" x="16" y="9" width="328" height="110"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="peg-v1-qfC">
-                                    <rect key="frame" x="0.0" y="0.0" width="93" height="110"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="96.5" height="110"/>
                                     <state key="normal" title="Brightness"/>
                                     <connections>
                                         <action selector="onFilterBrightness:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4C7-U4-NKk"/>
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u2O-Lv-7kL">
-                                    <rect key="frame" x="93" y="0.0" width="75.5" height="110"/>
+                                    <rect key="frame" x="96.5" y="0.0" width="78" height="110"/>
                                     <state key="normal" title="Contrast"/>
                                     <connections>
                                         <action selector="onFilterContrast:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FL8-ni-cCR"/>
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5DU-9T-kzv">
-                                    <rect key="frame" x="168.5" y="0.0" width="41.5" height="110"/>
+                                    <rect key="frame" x="174.5" y="0.0" width="43" height="110"/>
                                     <state key="normal" title="Gray"/>
                                     <connections>
                                         <action selector="onFilterGray:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cdo-rf-U7I"/>
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kwy-Rg-bJc">
-                                    <rect key="frame" x="210" y="0.0" width="50" height="110"/>
+                                    <rect key="frame" x="217.5" y="0.0" width="52" height="110"/>
                                     <state key="normal" title="Invert"/>
                                     <connections>
                                         <action selector="onFilterInvert:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vFT-Cg-Ro4"/>
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Ym-oZ-8RY">
-                                    <rect key="frame" x="260" y="0.0" width="68" height="110"/>
-                                    <state key="normal" title="Opacity"/>
+                                    <rect key="frame" x="269.5" y="0.0" width="58.5" height="110"/>
+                                    <state key="normal" title="Rotate"/>
                                     <connections>
-                                        <action selector="onFilterOpacity:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zlD-K6-bmr"/>
+                                        <action selector="onFilterRotate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9Ux-sC-OK4"/>
                                     </connections>
                                 </button>
                             </subviews>
