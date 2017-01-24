@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E80A10FC1E37A73E001B9993 /* BrightnessFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80A10F51E37A73E001B9993 /* BrightnessFilter.swift */; };
+		E80A10FD1E37A73E001B9993 /* ContrastFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80A10F61E37A73E001B9993 /* ContrastFilter.swift */; };
+		E80A10FE1E37A73E001B9993 /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80A10F71E37A73E001B9993 /* Filter.swift */; };
+		E80A10FF1E37A73E001B9993 /* GrayscaleFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80A10F81E37A73E001B9993 /* GrayscaleFilter.swift */; };
+		E80A11001E37A73E001B9993 /* InvertFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80A10F91E37A73E001B9993 /* InvertFilter.swift */; };
+		E80A11011E37A73E001B9993 /* OpacityFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80A10FA1E37A73E001B9993 /* OpacityFilter.swift */; };
 		E82230C01E34AE2600CDCF02 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82230BF1E34AE2600CDCF02 /* TableViewController.swift */; };
 		E82459271E1BECD500831344 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82459261E1BECD500831344 /* AppDelegate.swift */; };
 		E82459291E1BECD500831344 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82459281E1BECD500831344 /* ViewController.swift */; };
@@ -17,6 +23,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E80A10F51E37A73E001B9993 /* BrightnessFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrightnessFilter.swift; sourceTree = "<group>"; };
+		E80A10F61E37A73E001B9993 /* ContrastFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContrastFilter.swift; sourceTree = "<group>"; };
+		E80A10F71E37A73E001B9993 /* Filter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Filter.swift; sourceTree = "<group>"; };
+		E80A10F81E37A73E001B9993 /* GrayscaleFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GrayscaleFilter.swift; sourceTree = "<group>"; };
+		E80A10F91E37A73E001B9993 /* InvertFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InvertFilter.swift; sourceTree = "<group>"; };
+		E80A10FA1E37A73E001B9993 /* OpacityFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpacityFilter.swift; sourceTree = "<group>"; };
 		E82230BF1E34AE2600CDCF02 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		E82459231E1BECD500831344 /* Filterer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Filterer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E82459261E1BECD500831344 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -39,6 +51,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E80A10F41E37A73E001B9993 /* filters */ = {
+			isa = PBXGroup;
+			children = (
+				E80A10F51E37A73E001B9993 /* BrightnessFilter.swift */,
+				E80A10F61E37A73E001B9993 /* ContrastFilter.swift */,
+				E80A10F71E37A73E001B9993 /* Filter.swift */,
+				E80A10F81E37A73E001B9993 /* GrayscaleFilter.swift */,
+				E80A10F91E37A73E001B9993 /* InvertFilter.swift */,
+				E80A10FA1E37A73E001B9993 /* OpacityFilter.swift */,
+			);
+			path = filters;
+			sourceTree = "<group>";
+		};
 		E824591A1E1BECD500831344 = {
 			isa = PBXGroup;
 			children = (
@@ -58,6 +83,7 @@
 		E82459251E1BECD500831344 /* Filterer */ = {
 			isa = PBXGroup;
 			children = (
+				E80A10F41E37A73E001B9993 /* filters */,
 				E82459381E1BEE0300831344 /* RGBAImage.swift */,
 				E82459261E1BECD500831344 /* AppDelegate.swift */,
 				E82459281E1BECD500831344 /* ViewController.swift */,
@@ -142,10 +168,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E80A10FE1E37A73E001B9993 /* Filter.swift in Sources */,
+				E80A10FF1E37A73E001B9993 /* GrayscaleFilter.swift in Sources */,
 				E82459291E1BECD500831344 /* ViewController.swift in Sources */,
+				E80A11011E37A73E001B9993 /* OpacityFilter.swift in Sources */,
+				E80A11001E37A73E001B9993 /* InvertFilter.swift in Sources */,
 				E82459391E1BEE0300831344 /* RGBAImage.swift in Sources */,
+				E80A10FC1E37A73E001B9993 /* BrightnessFilter.swift in Sources */,
 				E82459271E1BECD500831344 /* AppDelegate.swift in Sources */,
 				E82230C01E34AE2600CDCF02 /* TableViewController.swift in Sources */,
+				E80A10FD1E37A73E001B9993 /* ContrastFilter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

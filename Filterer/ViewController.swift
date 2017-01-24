@@ -10,30 +10,17 @@ import UIKit
 
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
-  @IBOutlet weak var imageView: UIImageView!
-  @IBOutlet weak var toggleImage: UIButton!
-  @IBOutlet var secondaryMenu: UIView!
-  
-//  @IBAction func onImageToggle(_ sender: UIButton) {
-//    let image = UIImage(named: "sample")
-//    
-//    imageView.image = image
-//    toggleImage.isSelected = true
-//  }
-  @IBOutlet weak var filterButton: UIButton!
-  @IBOutlet weak var bottomMenu: UIView!
-  
   override func viewDidLoad() {
     super.viewDidLoad()
     secondaryMenu.backgroundColor = UIColor.white.withAlphaComponent(0.8)
-//    toggleImage.setTitle("Applied", for: .selected)
+    //    toggleImage.setTitle("Applied", for: .selected)
   }
-
+  
   override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()
     // Dispose of any resources that can be recreated.
   }
-
+  
   @IBAction func onFilter(_ sender: UIButton) {
     if(sender.isSelected){
       hideSecondaryMenu()
@@ -43,7 +30,20 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
       sender.isSelected = true
     }
   }
-
+  
+  @IBOutlet weak var imageView: UIImageView!
+  @IBOutlet weak var toggleImage: UIButton!
+  @IBOutlet var secondaryMenu: UIView!
+  @IBOutlet weak var filterButton: UIButton!
+  @IBOutlet weak var bottomMenu: UIView!
+  
+//  @IBAction func onImageToggle(_ sender: UIButton) {
+//    let image = UIImage(named: "sample")
+//    
+//    imageView.image = image
+//    toggleImage.isSelected = true
+//  }
+  
   @IBAction func onNewPhoto(_ sender: Any) {
     let actionSheet = UIAlertController(
       title: "New Photo",
@@ -87,6 +87,34 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     present(activityController, animated: true, completion: nil)
   }
   
+  @IBAction func onFilterBrightness(_ sender: Any) {
+    applyFilter(BrightnessFilter(["level": "150"]))
+  }
+  
+  
+  @IBAction func onFilterContrast(_ sender: Any) {
+    applyFilter(ContrastFilter(["level": "255"]))
+  }
+  
+  @IBAction func onFilterGray(_ sender: Any) {
+    applyFilter(GrayscaleFilter())
+  }
+  
+  @IBAction func onFilterInvert(_ sender: Any) {
+    applyFilter(InvertFilter())
+  }
+  
+  @IBAction func onFilterOpacity(_ sender: Any) {
+    applyFilter(OpacityFilter(["level": "510"]))
+  }
+  
+  // Private methods
+  
+  func applyFilter(_ filter: Filter){
+    let rgbaImage = RGBAImage(image: imageView.image!)
+    imageView.image = filter.run(rgbaImage!).toUIImage()!
+  }
+  
   func showCamera(){
     let cameraPicker = UIImagePickerController()
     cameraPicker.delegate = self
@@ -113,8 +141,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     dismiss(animated: true, completion: nil)
   }
   
-  // Private methods
-  
+
   func showSecodaryMenu(){
     view.addSubview(secondaryMenu)
     

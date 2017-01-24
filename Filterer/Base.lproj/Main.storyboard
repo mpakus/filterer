@@ -36,7 +36,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nVf-9S-wdT">
-                                                <rect key="frame" x="0.0" y="0.0" width="94" height="44"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="125" height="44"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="44" id="DGe-hS-UB7"/>
                                                 </constraints>
@@ -46,7 +46,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cej-Km-wx5">
-                                                <rect key="frame" x="94" y="0.0" width="93.5" height="44"/>
+                                                <rect key="frame" x="125" y="0.0" width="125" height="44"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="44" id="VNq-bQ-nfi"/>
                                                 </constraints>
@@ -56,7 +56,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gfn-iK-3kJ">
-                                                <rect key="frame" x="187.5" y="0.0" width="94" height="44"/>
+                                                <rect key="frame" x="250" y="0.0" width="125" height="44"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="44" id="dOd-Rx-s2A"/>
                                                 </constraints>
@@ -64,13 +64,6 @@
                                                 <connections>
                                                     <action selector="onShare:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DNU-FT-4IS"/>
                                                 </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ClV-Xi-uF8">
-                                                <rect key="frame" x="281.5" y="0.0" width="93.5" height="44"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="44" id="7CX-dp-fWc"/>
-                                                </constraints>
-                                                <state key="normal" title="Compare"/>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -109,28 +102,43 @@
                     <rect key="frame" x="0.0" y="0.0" width="368" height="128"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
-                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="9V8-wL-qm1">
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="9V8-wL-qm1">
                             <rect key="frame" x="16" y="9" width="328" height="110"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="peg-v1-qfC">
-                                    <rect key="frame" x="0.0" y="0.0" width="66" height="110"/>
-                                    <state key="normal" title="Red"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="93" height="110"/>
+                                    <state key="normal" title="Brightness"/>
+                                    <connections>
+                                        <action selector="onFilterBrightness:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4C7-U4-NKk"/>
+                                    </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u2O-Lv-7kL">
-                                    <rect key="frame" x="66" y="0.0" width="65" height="110"/>
-                                    <state key="normal" title="Green"/>
+                                    <rect key="frame" x="93" y="0.0" width="75.5" height="110"/>
+                                    <state key="normal" title="Contrast"/>
+                                    <connections>
+                                        <action selector="onFilterContrast:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FL8-ni-cCR"/>
+                                    </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5DU-9T-kzv">
-                                    <rect key="frame" x="131" y="0.0" width="66" height="110"/>
-                                    <state key="normal" title="Blue"/>
+                                    <rect key="frame" x="168.5" y="0.0" width="41.5" height="110"/>
+                                    <state key="normal" title="Gray"/>
+                                    <connections>
+                                        <action selector="onFilterGray:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cdo-rf-U7I"/>
+                                    </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kwy-Rg-bJc">
-                                    <rect key="frame" x="197" y="0.0" width="65" height="110"/>
-                                    <state key="normal" title="Yellow"/>
+                                    <rect key="frame" x="210" y="0.0" width="50" height="110"/>
+                                    <state key="normal" title="Invert"/>
+                                    <connections>
+                                        <action selector="onFilterInvert:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vFT-Cg-Ro4"/>
+                                    </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Ym-oZ-8RY">
-                                    <rect key="frame" x="262" y="0.0" width="66" height="110"/>
-                                    <state key="normal" title="Purple"/>
+                                    <rect key="frame" x="260" y="0.0" width="68" height="110"/>
+                                    <state key="normal" title="Opacity"/>
+                                    <connections>
+                                        <action selector="onFilterOpacity:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zlD-K6-bmr"/>
+                                    </connections>
                                 </button>
                             </subviews>
                         </stackView>
